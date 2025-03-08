@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+  --timberwolf: #dbd3d8;
+  --tekhelet: #3d348b;
+  --flash-white: #eff1f3;
+  --xanthous: #e6af2e;
+  --black: #2b2826;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-roboto: 'Roboto', monospace;
+}
+
+img {
+  /* Images */
+  max-width: 100%;
+  height: auto;
+}
+
+footer {
+  background-color: var(--tekhelet);
+  color: var(--timberwolf);
+
+  width: 100vw;
+  height: 10vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > p {
+  margin: 3px auto;
+}
+
+footer > p#lastModified {
+  color: var(--xanthous);
+}
