@@ -6,16 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Home page for hosting my activities during WDD 231 - Dynamic Web Fundamentals BYU course">
+        content="Home page for hosting my activities during WDD 231 - Web Frontend Development BYU course">
     <meta name="author" content="Adler M Orteney">
 
-    <title>WDD 131 - Dynamic Web Fundamentals - Adler M Orteney</title>
+    <title>WDD 231 - Web Frontend Development - Adler M Orteney</title>
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/small.css">
+
+    <script defer src="scripts/dates.js"></script>
+    <script defer src="scripts/navigation.js"></script>
 </head>
 
 <body>
+    <header>
+        <img src="images/profile.jpg" alt="Profile picture of me. White shirt with tie and smiling.">
+        <span>Adler M. Orteney</span>
+        <button type="button" id="menu"></button>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Github Profile</a></li>
+            <li><a href="https://linkedin.com/in/adler-orteney">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section>
+            <h2>Course Work</h2>
+            <ul>
+                <li>*</li>
+                <li>*</li>
+                <li>*</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>São Paulo, Brazil</h2>
+            <img src="images/av-paulista-unsplash.jpg" alt="SESC, Paulista Avenue, São Paulo, Brazil">
+        </section>
+
+        <section>
+            <h2>Web and Computer Programming Certificate</h2>
+        </section>
+    </main>
+
+    <footer>
+        <p><span id="currentYear"></span> 🎺 Adler Mesquita Orteney 🎺 Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
 
 </body>
 
