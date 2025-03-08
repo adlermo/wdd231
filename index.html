@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/small.css">
 
     <script defer src="scripts/dates.js"></script>
+    <script defer src="scripts/course.js"></script>
     <script defer src="scripts/navigation.js"></script>
 </head>
 
@@ -41,9 +42,9 @@
         <section>
             <h2>Course Work</h2>
             <ul>
-                <li>*</li>
-                <li>*</li>
-                <li>*</li>
+                <li></li>
+                <li></li>
+                <li></li>
             </ul>
         </section>
 
@@ -52,8 +53,15 @@
             <img src="images/av-paulista-unsplash.jpg" alt="SESC, Paulista Avenue, São Paulo, Brazil">
         </section>
 
-        <section>
+        <section class="course-list">
             <h2>Web and Computer Programming Certificate</h2>
+            <div class="course-list-filter">
+                <button onclick="renderCourses()">All</button>
+                <button onclick="renderCourses('CSE')">CSE</button>
+                <button onclick="renderCourses('WDD')">WDD</button>
+            </div>
+
+            <section id="courses"></section>
         </section>
     </main>
 
