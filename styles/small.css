@@ -149,6 +149,7 @@ main section h2 {
 
 #courses .course-card {
   width: 95%;
+  max-width: 512px;
   margin: 0.5rem 2rem;
   padding: 1rem;
   border: 1px solid var(--black);
@@ -160,17 +161,23 @@ main section h2 {
   align-items: center;
 }
 
-#courses .course-card .completed {
-  color: var(--xanthous);
+#courses .course-card.completed {
+  font-weight: bold;
+  color: var(--black);
+  background-color: var(--xanthous);
 }
 
 main section .course-list-filter {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-main section button {
+main section .course-list-filter button {
   width: 32%;
   background-color: var(--black);
   color: var(--flash-white);

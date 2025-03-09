@@ -85,6 +85,9 @@ const renderCourses = (filter) => {
         filteredCourses = courses.filter(course => course.subject === filter);
     }
 
+    let totalCredits = filteredCourses.reduce((total, course) => total + course.credits, 0);
+    document.querySelector('#credits').innerHTML = `Total Credits ${totalCredits}`;
+
     document.querySelector('#courses').innerHTML = filteredCourses.map(course => `
         <div class="course-card ${course.completed ? 'completed' : ''}">
             <p>${course.subject} ${course.number}</p>
