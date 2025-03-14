@@ -1,0 +1,12 @@
+[
+  {
+    "name": "John Doe's Pies",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "johndoe.jpg",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  }
+]

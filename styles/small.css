@@ -56,7 +56,7 @@ header img {
   list-style: none;
   background-color: var(--black);
   color: var(--flash-white);
-}
+} 
 
 .navigation a {
   display: none;
