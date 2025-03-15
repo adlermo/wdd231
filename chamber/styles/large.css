@@ -1,0 +1,21 @@
+:root {
+  --timberwolf: #dbd3d8;
+  --tekhelet: #3d348b;
+  --flash-white: #eff1f3;
+  --xanthous: #e6af2e;
+  --black: #2b2826;
+
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-roboto: 'Roboto', monospace;
+}
+
+/* Large Views */
+
+@media (min-width: 769px) {
+  nav ul {
+    display: flex;
+  }
+  nav ul li {
+    flex: 1 1 100%;
+  }
+}

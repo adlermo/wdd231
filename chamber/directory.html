@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Home page for hosting my activities during WDD 231 - Web Frontend Development BYU course">
+    <meta name="author" content="Adler M Orteney">
+
+    <title>WDD 231 - Web Frontend Development - Adler M Orteney</title>
+
+    <link rel="icon" href="favicon.ico">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/small.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script defer src="scripts/dates.js"></script>
+    <script defer src="scripts/course.js"></script>
+    <script defer src="scripts/navigation.js"></script>
+</head>
+
+<body>
+    <header>
+        <img src="images/profile.jpg" alt="Profile picture of me. White shirt with tie and smiling.">
+        <span>Adler M. Orteney</span>
+        <button type="button" id="menu" aria-label="menu menu"></button>
+    </header>
+
+    <nav>
+        <ul class="navigation">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Chamber</a></li>
+            <li><a href="#">Github Profile</a></li>
+            <li><a href="https://linkedin.com/in/adler-orteney">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+
+        <section>
+            <h2>Course Work</h2>
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>São Paulo, Brazil</h2>
+            <img src="images/av-paulista-unsplash.webp" alt="SESC, Paulista Avenue, São Paulo, Brazil">
+        </section>
+
+        <section class="course-list">
+            <h2>Web and Computer Programming Certificate</h2>
+            <div class="course-list-filter">
+                <button onclick="renderCourses()">All</button>
+                <button onclick="renderCourses('CSE')">CSE</button>
+                <button onclick="renderCourses('WDD')">WDD</button>
+            </div>
+
+            <section id="courses"></section>
+            <hr>
+            <section id="credits"></section>
+        </section>
+    </main>
+
+    <footer>
+        <p><span id="currentYear"></span> 🎺 Adler Mesquita Orteney 🎺 Brazil</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>
