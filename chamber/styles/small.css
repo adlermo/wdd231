@@ -110,6 +110,10 @@ main {
   background-color: var(--timberwolf);
 }
 
+main h1 {
+  text-align: center;
+}
+
 .menu {
   margin: 1rem auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
