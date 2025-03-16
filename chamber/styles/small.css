@@ -106,9 +106,8 @@ nav a:hover {
 main {
   margin: 0 auto;
   padding: 0.5rem;
-  max-width: 700px;
+  max-width: 1024px;
   background-color: var(--timberwolf);
-  font-family: Roboto, Helvetica, sans-serif;
 }
 
 .menu {
@@ -151,7 +150,7 @@ section {
 }
 
 .grid h3 {
-  font-family: 'Caveat', cursive;
+  color: var(--tekhelet);
 }
 
 .list {
@@ -200,7 +199,6 @@ section a {
 }
 
 img {
-  height: 75px;
   max-width: 100%; /* Images are jerks - Seattle*/
 }
 
