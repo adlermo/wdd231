@@ -8,7 +8,7 @@ const displayMembers = (members) => {
         const memberCard = document.createElement("section");
         memberCard.classList.add("member");
         memberCard.innerHTML = `
-            <img src="../images/${member.logo}" alt="${member.name}">
+            <img src="${member.logo}" alt="${member.name}">
             <h2>${member.name}</h2>
             <p>${member.address}</p>
             <p>${member.phone}</p>
