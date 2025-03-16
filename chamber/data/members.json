@@ -1,20 +1,130 @@
 [
   {
-    "name": "John Doe's Pies",
+    "name": "Accenture",
     "address": "123 Main St",
     "phone": "555-555-5555",
     "website": "www.johndoe.com",
-    "logo": "https://api.api-ninjas.com/v1/randomimage?category=city",
+    "logo": "accenture.png",
     "membership_level": "Gold",
     "rating": 4,
     "owner": "Jane Doe"
   },
   {
-    "name": "John Doe's Pies",
+    "name": "Bmg Seguros",
     "address": "123 Main St",
     "phone": "555-555-5555",
     "website": "www.johndoe.com",
-    "logo": "https://api.api-ninjas.com/v1/randomimage?category=city",
+    "logo": "bmg-seguros.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "Boeing",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "boeing.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "Claro",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "claro.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "Danone",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "danone.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "Embratel",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "embratel.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "Getnet",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "getnet.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "Globo",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "globo.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "Grupo Fleury",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "grupo-fleury.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "KPMG",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "kpmg.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "Mary Kay",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "mary-kay.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "Nestle",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "nestle.png",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "Quinto Andar",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "www.johndoe.com",
+    "logo": "quinto-andar.png",
     "membership_level": "Gold",
     "rating": 4,
     "owner": "Jane Doe"
