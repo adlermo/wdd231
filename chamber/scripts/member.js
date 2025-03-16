@@ -12,7 +12,7 @@ const displayMembers = (members) => {
             <h3>${member.name}</h3>
             <p>${member.address}</p>
             <p>${member.phone}</p>
-            <p>${member.website}</p>
+            <a href="${member.website}" target="_blank">${member.website}</a>
         `;
         display.appendChild(memberCard);
     });
