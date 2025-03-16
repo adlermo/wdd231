@@ -3,7 +3,17 @@
     "name": "John Doe's Pies",
     "address": "123 Main St",
     "phone": "555-555-5555",
-    "website": "www.johndoe.com",
+    "website": "https://api.api-ninjas.com/v1/randomimage?category=city",
+    "logo": "johndoe.jpg",
+    "membership_level": "Gold",
+    "rating": 4,
+    "owner": "Jane Doe"
+  },
+  {
+    "name": "John Doe's Pies",
+    "address": "123 Main St",
+    "phone": "555-555-5555",
+    "website": "https://api.api-ninjas.com/v1/randomimage?category=city",
     "logo": "johndoe.jpg",
     "membership_level": "Gold",
     "rating": 4,
