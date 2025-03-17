@@ -19,13 +19,16 @@ const displayMembers = (members) => {
 };
 
 // Request to members of the chamber in ../data/members.json
-fetch("https://adlermo.github.io/wdd231/chamber/data/members.json").then(response => {
-    return response.json();
-}).then(data => {
-    displayMembers(data);
-}).catch(error => {
-    console.log(error);
-});
+(async () => {
+    try {
+        const response = await fetch("https://adlermo.github.io/wdd231/chamber/data/members.json")
+        console.warn(response)
+        const data = await response.json();
+        displayMembers(data);
+    } catch (error) {
+        console.log(error);
+    }
+})();
 
 // Toggle between grid and list view function
 
