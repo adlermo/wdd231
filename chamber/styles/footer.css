@@ -1,0 +1,31 @@
+:root {
+  --timberwolf: #dbd3d8;
+  --tekhelet: #3d348b;
+  --flash-white: #eff1f3;
+  --xanthous: #e6af2e;
+  --black: #2b2826;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-roboto: 'Roboto', monospace;
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--tekhelet);
+  color: var(--timberwolf);
+
+  width: 100vw;
+  height: 10vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer > p {
+  margin: 3px auto;
+}
+
+footer > p#lastModified {
+  color: var(--xanthous);
+}

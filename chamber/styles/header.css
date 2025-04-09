@@ -1,0 +1,102 @@
+:root {
+  --timberwolf: #dbd3d8;
+  --tekhelet: #3d348b;
+  --flash-white: #eff1f3;
+  --xanthous: #e6af2e;
+  --black: #2b2826;
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-roboto: 'Roboto', monospace;
+}
+
+/* Header Styles */
+
+header {
+  background-color: var(--tekhelet);
+  color: var(--flash-white);
+  text-align: center;
+  padding: 1rem;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header span {
+  font-family: var(--font-montserrat);
+  font-size: 2rem;
+}
+
+header img {
+  max-width: 3em;
+  margin: 0 1em;
+}
+
+/* Hamburguer Navigation Styles */
+
+#menu {
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: var(--flash-white);
+}
+
+#menu::before {
+  content: '☰';
+}
+
+#menu.open::before {
+  content: '✖';
+  color: var(--xanthous);
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  background-color: var(--black);
+  color: var(--flash-white);
+}
+
+.navigation a {
+  display: none;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: var(--flash-white);
+}
+
+.navigation a:hover {
+  background-color: var(--flash-white);
+  color: var(--tekhelet);
+  font-weight: 700;
+}
+
+/* when the button is clicked - the open class is toggled (added/removed) */
+.open a {
+  display: block;
+}
+
+/* Navigation Styles */
+
+nav {
+  background-color: var(--black);
+  margin: 0 auto;
+  /* max-width: 800px; */
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav a {
+  display: block;
+  color: var(--flash-white);
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
