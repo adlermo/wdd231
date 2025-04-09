@@ -113,6 +113,7 @@ main {
 main h1 {
   text-align: center;
 }
+
 .menu {
   margin: 1rem auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -212,7 +213,7 @@ section a {
 }
 
 img {
-  max-width: 100%; /* Images are jerks - Seattle*/
+  max-width: 100%;
 }
 
 /* Footer Styles */

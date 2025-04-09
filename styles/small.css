@@ -82,7 +82,6 @@ header img {
 nav {
   background-color: var(--black);
   margin: 0 auto;
-  max-width: 800px;
 }
 
 nav ul {
@@ -120,7 +119,7 @@ main h1 {
 
 main section {
   margin: 1rem 0;
-  max-width: 768px;
+  /* max-width: 768px; */
 
   display: flex;
   flex-direction: column;
