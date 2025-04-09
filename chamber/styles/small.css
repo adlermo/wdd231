@@ -82,7 +82,7 @@ header img {
 nav {
   background-color: var(--black);
   margin: 0 auto;
-  max-width: 800px;
+  /* max-width: 800px; */
 }
 
 nav ul {

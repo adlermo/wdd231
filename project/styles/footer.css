@@ -17,6 +17,10 @@ footer {
   padding: 2em;
 }
 
+footer > p {
+  color: var(--sand);
+}
+
 footer > p > a {
   color: var(--sand);
 }

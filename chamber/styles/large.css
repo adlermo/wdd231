@@ -10,12 +10,46 @@
 }
 
 /* Large Views */
+@media (min-width: 1024px) {
+  /* Hamburguer Navigation Styles */
 
-@media (min-width: 769px) {
-  nav ul {
-    display: flex;
+  #menu::before {
+    content: '';
   }
-  nav ul li {
-    flex: 1 1 100%;
+
+  #menu.open::before {
+    content: '';
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style: none;
+    background-color: var(--black);
+    color: var(--flash-white);
+  }
+
+  .navigation a {
+    display: block;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: var(--flash-white);
+  }
+
+  .navigation a:active {
+    border-top: 2px solid var(--xanthous);
+  }
+
+  .navigation a:hover {
+    background-color: var(--flash-white);
+    color: var(--tekhelet);
+    font-weight: 700;
+  }
+
+  /* when the button is clicked - the open class is toggled (added/removed) */
+  .open a {
+    display: block;
   }
 }
