@@ -113,7 +113,6 @@ main {
 main h1 {
   text-align: center;
 }
-
 .menu {
   margin: 1rem auto;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -131,6 +130,16 @@ section {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
   background-color: #eee;
+}
+
+section.hero picture {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+section.hero picture img {
+  width: 100%;
+  height: auto;
 }
 
 .grid {
