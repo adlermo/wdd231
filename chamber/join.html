@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description"
-        content="Home page for hosting my activities during WDD 231 - Web Frontend Development BYU course">
+    <meta name="description" content="Chamber of Commerce WDD 231 - Web Frontend Development BYU course">
     <meta name="author" content="Adler M Orteney">
 
     <meta property="og:title" content="St Paul Chamber of Commerce">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://adlermo.github.io/wdd231/chamber/index.html">
+    <meta property="og:url" content="https://adlermo.github.io/wdd231/chamber/join.html">
     <meta property="og:image" content="https://adlermo.github.io/wdd231/chamber/images/av-paulista-unsplash.jpg">
     <meta property="og:image:width" content="200">
     <meta property="og:image:height" content="200">
     <meta property="og:description"
-        content="Chamber of Commerce home page. This is my assignment during WDD 231 - Web Frontend Development BYU course">
+        content="Chamber of Commerce directory page. This is my assignment during WDD 231 - Web Frontend Development BYU course">
     <meta property="og:author" content="Adler M Orteney">
 
     <title>St Paul Chamber of Commerce</title>
@@ -49,51 +48,33 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
             <li><a href="#">Join</a></li>
-            <li><a href="#">Discover</a></li>
+            <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
 
     <main>
-        <section class="hero">
-            <picture>
-                <source srcset="images/hero_50.webp" type="image/webp">
-                <source srcset="images/hero_25.webp" type="image/webp">
+        <h1>Chamber of Commerce SP</h1>
+        <section class="join">
+            <h2>Join</h2>
+            <p>Join the Chamber of Commerce and be part of our community.</p>
+            <form action="#" method="post" id="joinForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
 
-                <img src="images/hero.webp">
-            </picture>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <button type="submit">Join</button>
+            </form>
         </section>
-
-        <section class="info">
-            <h1>Welcome to the St Paul Chamber of Commerce</h1>
-            <p>We are a non-profit organization dedicated to supporting local businesses and fostering economic growth
-                in
-                our community.</p>
-            <p>Join us today and be part of a vibrant network of entrepreneurs and professionals!</p>
-            <p>Our mission is to promote and support local businesses, advocate for economic development, and enhance
-                the
-                quality of life in our community.</p>
-        </section>
-
-        <section class="partners">
-            <ul class="partners-list">
-                <li><a href="#">Partner 1</a></li>
-                <li><a href="#">Partner 2</a></li>
-                <li><a href="#">Partner 3</a></li>
-            </ul>
-
-        </section>
-
     </main>
 
     <footer>
-        <section class="footer-contact">
-            
-        </section>
-        <section class="footer-media"></section>
-        <section class="footer-info">
-            <p><span id="currentYear"></span> 🎺 Adler Mesquita Orteney 🎺 Brazil</p>
-            <p id="lastModified"></p>
-        </section>
+        <p><span id="currentYear"></span> 🎺 Adler Mesquita Orteney 🎺 Brazil</p>
+        <p id="lastModified"></p>
     </footer>
 
 </body>
