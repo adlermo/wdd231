@@ -21,7 +21,7 @@ const displayMembers = (members) => {
 // Request to members of the chamber in ../data/members.json
 (async () => {
     try {
-        const response = await fetch("../data/members.json")
+        const response = await fetch("https://adlermo.github.io/wdd231/chamber/data/members.json")
         console.warn(response)
         const data = await response.json();
         displayMembers(data);

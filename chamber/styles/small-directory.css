@@ -74,40 +74,40 @@ section {
   flex-direction: column;
 }
 
-.list section {
+main > .list section {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr 1fr;
   margin: 0;
   padding: 0.75rem;
 }
 
-.list section > * {
+main > .list section > * {
   margin: 0 1rem;
 }
 
-.list section img {
+main > .list section img {
   display: none; /* smaller viewports only */
 }
 
-.list section h3 {
+main > .list section h3 {
   font-size: 1rem;
   font-family: Roboto, Helvetica, sans-serif;
 }
 
-.list section:nth-child(even) {
+main > .list section:nth-child(even) {
   background-color: var(--xanthous);
 }
 
-section h3 {
+main > section h3 {
   font-size: 1.5rem;
 }
 
-section p {
+main > section p {
   font-weight: 600;
   font-size: smaller;
 }
 
-section a {
+main > section a {
   font-family: 'Roboto', Arial, sans-serif;
   font-size: 0.85rem;
   color: navy;
