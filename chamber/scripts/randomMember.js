@@ -9,11 +9,15 @@ const displayMembers = (members) => {
         memberCard.classList.add("member");
         memberCard.innerHTML = `
             <img src="images/${member.logo}" alt="${member.name}" width="100%" height="auto">
-            <h3>${member.name}</h3>
-            <hr>
-            <p>${member.address}</p>
-            <p>${member.phone}</p>
-            <a href="${member.website}" target="_blank">${member.website}</a>
+            <div>
+                <h3>${member.name}</h3>
+                <br>
+                <hr>
+                <br>
+                <p><strong>Email:</strong> ${member.email}</p>
+                <p><strong>Phone:</strong> ${member.phone}</p>
+                <p><strong>URL:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+            </div>
         `;
         display.appendChild(memberCard);
     });
