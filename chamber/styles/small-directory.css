@@ -39,7 +39,7 @@ main h1 {
   font-weight: 700;
 }
 
-section {
+main > article.grid > section.member {
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.5rem;
   background-color: #eee;
