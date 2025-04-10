@@ -26,8 +26,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/large-index.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/large-index.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +44,7 @@
 <body>
     <header>
         <img src="../images/profile.jpg" alt="Profile picture of me. White shirt with tie and smiling.">
-        <span>St Paul's Chamber of Commerce</span>
+        <span>St Paul Chamber of Commerce</span>
         <button type="button" id="menu" aria-label="menu menu"></button>
     </header>
 
@@ -63,7 +63,7 @@
                 <source srcset="images/hero_50.webp" type="image/webp">
                 <source srcset="images/hero_25.webp" type="image/webp">
 
-                <img src="images/hero.webp">
+                <img src="images/hero.webp" alt="IA Generated Image of São Paulo, representing the city" loading="lazy">
             </picture>
             <a href="join.html">Join Chamber</a>
         </section>
@@ -115,10 +115,31 @@
 
     <footer>
         <section class="footer-contact">
+            <p><strong>St Paul Chamber of Commerce</strong></p>
+            <p>R Nilza Medeiros Martins, 490</p>
+            <p>Sao Paulo, Vila Sonia</p>
+            <p>info@stpaulcc.org</p>
+            <p>+55 67 99919-8409</p>
         </section>
-        <section class="footer-media"></section>
+
+        <section class="footer-media">
+
+            <a href="https://www.youtube.com/stpaulcc" target="_blank">
+                <img src="images/youtube.png" alt="Youtube">
+            </a>
+            <a href="https://www.instagram.com/stpaulcc" target="_blank">
+                <img src="images/instagram.png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/company/stpaulcc" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn">
+            </a>
+
+        </section>
+
         <section class="footer-info">
-            <p><span id="currentYear"></span> 🎺 Adler Mesquita Orteney 🎺 Brazil</p>
+            <p>WDD231 Class Project</p>
+            <p>Adler M Orteney</p>
+            <p><span id="currentYear"></span> St Paul Chamber of Commerce</p>
             <p id="lastModified"></p>
         </section>
     </footer>
