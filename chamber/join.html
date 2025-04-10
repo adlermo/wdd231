@@ -8,7 +8,7 @@
     <meta name="description" content="Chamber of Commerce WDD 231 - Web Frontend Development BYU course">
     <meta name="author" content="Adler M Orteney">
 
-    <meta property="og:title" content="St Paul Chamber of Commerce">
+    <meta property="og:title" content="Join Us">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://adlermo.github.io/wdd231/chamber/join.html">
     <meta property="og:image" content="https://adlermo.github.io/wdd231/chamber/images/av-paulista-unsplash.jpg">
@@ -25,7 +25,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/large-join.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +35,7 @@
 
     <script defer src="scripts/dates.js"></script>
     <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/dialog.js"></script>
 </head>
 
 <body>
@@ -48,28 +49,112 @@
         <ul class="navigation">
             <li><a href="index.html">Home</a></li>
             <li><a href="directory.html">Directory</a></li>
-            <li><a href="#">Join</a></li>
+            <li><a href="join.html">Join</a></li>
             <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
 
     <main>
-        <h1>Chamber of Commerce SP</h1>
+        <h1>Join Us</h1>
+
         <section class="join">
-            <h2>Join</h2>
-            <p>Join the Chamber of Commerce and be part of our community.</p>
-            <form action="thankyou.html" method="get" id="joinForm">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+            <section class="join-info">
+                <h2>Check all our membership categories</h2>
+                <p>Join our St Paul Chamber of Commerce and enjoy all of the benefits as listed bellow.</p>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <article id="membership-types">
+                    <section>
+                        <h3>Non-Profit Membership 🏅</h3>
+                        <a id="nonprofit">Learn more</a>
+                    </section>
 
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
+                    <section>
+                        <h3>Bronze Membership 🥉</h3>
+                        <a id="bronze">Learn more</a>
+                    </section>
 
-                <button type="submit">Join</button>
-            </form>
+                    <section>
+                        <h3>Silver Membership 🥈</h3>
+                        <a id="silver">Learn more</a>
+                    </section>
+
+                    <section>
+                        <h3>Gold Membership 🥇</h3>
+                        <a id="gold">Learn more</a>
+                    </section>
+                </article>
+
+                <dialog id="membership-dialog">
+                    <button id="close-dialog" aria-label="Close dialog" autofocus>X</button>
+                    <h3 id="dialog-title">Membership Type</h3>
+                    <p id="dialog-description">Description of the membership type.</p>
+                    <ol id="dialog-benefits">Benefits of the membership type.</ol>
+                </dialog>
+            </section>
+
+            <section>
+                <h2>Fill the form and become a member!</h2>
+                <br>
+                <form action="thankyou.html" method="get" id="joinForm">
+                    <label for="first-name">First Name <span>*</span>
+                        <br>
+                        <input type="text" id="first-name" name="first-name" title="first-name" required
+                            autocomplete="given-name">
+                    </label>
+
+                    <label for="last-name">Last Name <span>*</span>
+                        <br>
+                        <input type="text" id="last-name" name="last-name" title="Please enter your last name" required
+                            autocomplete="family-name">
+                    </label>
+
+                    <label for="organization-title">Organization Title <span>*</span>
+                        <br>
+                        <input type="text" id="organization-title" name="organization-title" title="organization-title"
+                            required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                    </label>
+
+                    <label for="email">Email <span>*</span>
+                        <br>
+                        <input type="email" id="email" name="email" required autocomplete="email"
+                            placeholder="aorteney@byupathway.com">
+                    </label>
+
+                    <label for="phone">Phone <span>*</span>
+                        <br>
+                        <input type="tel" id="phone" name="phone" required autocomplete="mobile">
+                    </label>
+
+                    <label for="company">Company <span>*</span>
+                        <br>
+                        <input type="text" id="company" name="company" required autocomplete="organization"
+                            placeholder="St Paul Chamber of Commerce">
+                    </label>
+
+                    <label for="membership-type">Membership Type <span>*</span>
+                        <br>
+                        <select id="membership-type" name="membership-type" required>
+                            <option value="" disabled selected>Select your membership type</option>
+                            <option value="non-profit">Non-Profit</option>
+                            <option value="bronze">Bronze</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                        </select>
+                    </label>
+
+                    <label for="description">Description:
+                        <br>
+                        <textarea id="description" name="description" rows="4" cols="50"
+                            placeholder="Description of your company or business"></textarea>
+                    </label>
+
+                    <label for="timestamp">
+                        <input type="hidden" name="timestamp" id="timestamp" value="">
+                    </label>
+
+                    <button type="submit">Join</button>
+                </form>
+            </section>
         </section>
     </main>
 
