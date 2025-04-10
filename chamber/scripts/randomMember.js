@@ -10,6 +10,7 @@ const displayMembers = (members) => {
         memberCard.innerHTML = `
             <img src="images/${member.logo}" alt="${member.name}" width="100%" height="auto">
             <h3>${member.name}</h3>
+            <hr>
             <p>${member.address}</p>
             <p>${member.phone}</p>
             <a href="${member.website}" target="_blank">${member.website}</a>
@@ -18,32 +19,16 @@ const displayMembers = (members) => {
     });
 };
 
-// Request to members of the chamber in ../data/members.json
-(async () => {
+// Top Random Partners Home Page
+const randomMembers = async () => {
     try {
-        const response = await fetch("../data/members.json")
-        console.warn(response)
+        const response = await fetch("https://adlermo.github.io/wdd231/chamber/data/members.json")
         const data = await response.json();
-        displayMembers(data);
+        const randomMembers = data.sort(() => 0.5 - Math.random()).slice(0, 3);
+        displayMembers(randomMembers);
     } catch (error) {
         console.log(error);
     }
-})();
-
-// Toggle between grid and list view function
-const gridbutton = document.querySelector("#grid");
-const listbutton = document.querySelector("#list");
-
-const display = document.querySelector("article");
-if (gridbutton) {
-    gridbutton.addEventListener("click", () => {
-        display.classList.add("grid");
-        display.classList.remove("list");
-    });
-    listbutton.addEventListener("click", showList);
-
-    function showList() {
-        display.classList.add("list");
-        display.classList.remove("grid");
-    }
 }
+
+randomMembers();
