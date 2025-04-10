@@ -6,9 +6,10 @@
     "email": "contact@accenture.com",
     "website": "www.accenture.com",
     "logo": "accenture.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "Julie Sweet"
+    "owner": "Julie Sweet",
+    "membership_level": "Gold",
+    "membership_start_date": "1989-01-01"
   },
   {
     "name": "Bmg Seguros",
@@ -17,9 +18,10 @@
     "email": "atendimento@bmg.com.br",
     "website": "www.bmg.com.br/seguros",
     "logo": "bmg-seguros.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "Gustavo Sousa"
+    "owner": "Gustavo Sousa",
+    "membership_level": "Silver",
+    "membership_start_date": "2018-05-15"
   },
   {
     "name": "Boeing",
@@ -28,9 +30,10 @@
     "email": "info@boeing.com",
     "website": "www.boeing.com",
     "logo": "boeing.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "David Calhoun"
+    "owner": "David Calhoun",
+    "membership_level": "Gold",
+    "membership_start_date": "1916-07-15"
   },
   {
     "name": "Claro",
@@ -39,9 +42,10 @@
     "email": "faleconosco@claro.com.br",
     "website": "www.claro.com.br",
     "logo": "claro.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "José Félix"
+    "owner": "José Félix",
+    "membership_level": "Gold",
+    "membership_start_date": "2003-01-01"
   },
   {
     "name": "Danone",
@@ -50,9 +54,10 @@
     "email": "contact@danone.com",
     "website": "www.danone.com",
     "logo": "danone.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "Antoine de Saint-Affrique"
+    "owner": "Antoine de Saint-Affrique",
+    "membership_level": "Silver",
+    "membership_start_date": "2019-03-10"
   },
   {
     "name": "Embratel",
@@ -61,9 +66,10 @@
     "email": "sac@embratel.com.br",
     "website": "www.embratel.com.br",
     "logo": "embratel.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "Rodrigo Abreu"
+    "owner": "Rodrigo Abreu",
+    "membership_level": "Bronze",
+    "membership_start_date": "1965-08-16"
   },
   {
     "name": "Getnet",
@@ -72,9 +78,10 @@
     "email": "comercial@getnet.com.br",
     "website": "www.getnet.com.br",
     "logo": "getnet.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "Fernando Teles"
+    "owner": "Fernando Teles",
+    "membership_level": "Silver",
+    "membership_start_date": "2014-09-22"
   },
   {
     "name": "Globo",
@@ -83,9 +90,10 @@
     "email": "ouvidoria@globo.com",
     "website": "www.globo.com",
     "logo": "globo.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "Jorge Nóbrega"
+    "owner": "Jorge Nóbrega",
+    "membership_level": "Gold",
+    "membership_start_date": "1965-07-26"
   },
   {
     "name": "Grupo Fleury",
@@ -94,9 +102,10 @@
     "email": "relacionamento@fleury.com.br",
     "website": "www.fleury.com.br",
     "logo": "grupo-fleury.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "Jeane Tsutsui"
+    "owner": "Jeane Tsutsui",
+    "membership_level": "Non-Profit",
+    "membership_start_date": "2020-11-05"
   },
   {
     "name": "KPMG",
@@ -105,9 +114,10 @@
     "email": "info@kpmg.com",
     "website": "www.kpmg.com",
     "logo": "kpmg.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "Bill Thomas"
+    "owner": "Bill Thomas",
+    "membership_level": "Gold",
+    "membership_start_date": "1987-01-01"
   },
   {
     "name": "Mary Kay",
@@ -116,9 +126,10 @@
     "email": "customerservice@marykay.com",
     "website": "www.marykay.com",
     "logo": "mary-kay.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "David Holl"
+    "owner": "David Holl",
+    "membership_level": "Bronze",
+    "membership_start_date": "2005-04-18"
   },
   {
     "name": "Nestle",
@@ -127,9 +138,10 @@
     "email": "contact@nestle.com",
     "website": "www.nestle.com",
     "logo": "nestle.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "Mark Schneider"
+    "owner": "Mark Schneider",
+    "membership_level": "Gold",
+    "membership_start_date": "1866-01-01"
   },
   {
     "name": "Quinto Andar",
@@ -138,8 +150,9 @@
     "email": "atendimento@quintoandar.com.br",
     "website": "www.quintoandar.com.br",
     "logo": "quinto-andar.png",
-    "membership_level": "Gold",
     "rating": 4,
-    "owner": "Gabriel Braga"
+    "owner": "Gabriel Braga",
+    "membership_level": "Silver",
+    "membership_start_date": "2013-06-01"
   }
 ]

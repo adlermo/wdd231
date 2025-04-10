@@ -28,7 +28,9 @@ const randomMembers = async () => {
     try {
         const response = await fetch("https://adlermo.github.io/wdd231/chamber/data/members.json")
         const data = await response.json();
-        const randomMembers = data.sort(() => 0.5 - Math.random()).slice(0, 3);
+        const randomMembers = data
+            .filter(member => member.membership === "Gold" || member.membership === "Silver")
+            .sort(() => 0.5 - Math.random()).slice(0, 3);
         displayMembers(randomMembers);
     } catch (error) {
         console.log(error);
