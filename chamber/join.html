@@ -98,42 +98,44 @@
                 <form action="thankyou.html" method="get" id="joinForm">
                     <label for="first-name">First Name <span>*</span>
                         <br>
-                        <input type="text" id="first-name" name="first-name" title="first-name" required
+                        <input type="text" id="first-name" name="first-name" title="Enter your first name" required
                             autocomplete="given-name">
                     </label>
 
                     <label for="last-name">Last Name <span>*</span>
                         <br>
-                        <input type="text" id="last-name" name="last-name" title="Please enter your last name" required
+                        <input type="text" id="last-name" name="last-name" title="Enter your last name" required
                             autocomplete="family-name">
                     </label>
 
                     <label for="organization-title">Organization Title <span>*</span>
                         <br>
-                        <input type="text" id="organization-title" name="organization-title" title="organization-title"
-                            required autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
+                        <input type="text" id="organization-title" name="organization-title"
+                            title="Enter your organizational title (min. 7 letters)" required
+                            autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}">
                     </label>
 
                     <label for="email">Email <span>*</span>
                         <br>
-                        <input type="email" id="email" name="email" required autocomplete="email"
-                            placeholder="aorteney@byupathway.com">
+                        <input type="email" id="email" name="email" title="Enter a valid email" required
+                            autocomplete="email" placeholder="aorteney@byupathway.com">
                     </label>
 
                     <label for="phone">Phone <span>*</span>
                         <br>
-                        <input type="tel" id="phone" name="phone" required autocomplete="mobile">
+                        <input type="tel" id="phone" name="phone" title="Enter your mobile number" required
+                            autocomplete="tel" placeholder="+55 11 98765-4321">
                     </label>
 
                     <label for="company">Company <span>*</span>
                         <br>
-                        <input type="text" id="company" name="company" required autocomplete="organization"
-                            placeholder="St Paul Chamber of Commerce">
+                        <input type="text" id="company" name="company" title="Enter your organization name" required
+                            autocomplete="organization" placeholder="St Paul Chamber of Commerce">
                     </label>
 
                     <label for="membership-type">Membership Type <span>*</span>
                         <br>
-                        <select id="membership-type" name="membership-type" required>
+                        <select id="membership-type" name="membership-type" title="Select membership level" required>
                             <option value="" disabled selected>Select your membership type</option>
                             <option value="non-profit">Non-Profit</option>
                             <option value="bronze">Bronze</option>
@@ -145,7 +147,8 @@
                     <label for="description">Description:
                         <br>
                         <textarea id="description" name="description" rows="4" cols="50"
-                            placeholder="Description of your company or business"></textarea>
+                            title="Describe your organization" placeholder="Description of your company or business"
+                            maxlength="500"></textarea>
                     </label>
 
                     <input type="hidden" name="timestamp" id="timestamp">
