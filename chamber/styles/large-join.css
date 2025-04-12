@@ -80,6 +80,8 @@ article#membership-types > section {
   background-color: var(--flash-white);
   border-radius: 0.5rem;
   border: 1px solid var(--timberwolf);
+
+  animation: fadeIn 1.5s ease-in-out;
 }
 
 article#membership-types > section > h3 {
@@ -101,6 +103,8 @@ article#membership-types > section > a {
   padding: 0.5em 1.5em;
   margin: 1em auto;
   user-select: none;
+
+  animation: slowShake 5s ease;
 }
 
 article#membership-types > section > a:hover {
@@ -111,6 +115,37 @@ article#membership-types > section > a:hover {
 article#membership-types > section > a:active {
   cursor: pointer;
   box-shadow: 0 0 5px var(--tekhelet);
+}
+
+/* Animation to the cards */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slowShake {
+  5% {
+    transform: rotate(-5deg);
+  }
+  10% {
+    transform: rotate(5deg);
+  }
+  15% {
+    transform: rotate(-5deg);
+  }
+  20% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
 }
 
 /* Dialog modal styles */

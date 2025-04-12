@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/large.css">
+    <link rel="stylesheet" href="styles/thankyou.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,6 +36,7 @@
 
     <script defer src="scripts/dates.js"></script>
     <script defer src="scripts/navigation.js"></script>
+    <script defer src="scripts/join-form.js"></script>
 </head>
 
 <body>
@@ -55,6 +57,20 @@
 
     <main>
         <h1>Confirmation Page</h1>
+        <section>
+            <h2>Thank you for joining!</h2>
+            <p>Here is the information you submitted:</p>
+            <ul>
+                <li><strong>First Name:</strong> <span id="display-first-name"></span></li>
+                <li><strong>Last Name:</strong> <span id="display-last-name"></span></li>
+                <li><strong>Organization Title:</strong> <span id="display-organization-title"></span></li>
+                <li><strong>Email:</strong> <span id="display-email"></span></li>
+                <li><strong>Phone:</strong> <span id="display-phone"></span></li>
+                <li><strong>Company:</strong> <span id="display-company"></span></li>
+                <li><strong>Membership Type:</strong> <span id="display-membership-type"></span></li>
+                <li><strong>Description:</strong> <span id="display-description"></span></li>
+            </ul>
+        </section>
     </main>
 
     <footer>

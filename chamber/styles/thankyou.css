@@ -1,0 +1,51 @@
+:root {
+  --timberwolf: #dbd3d8;
+  --tekhelet: #3d348b;
+  --flash-white: #eff1f3;
+  --xanthous: #e6af2e;
+  --black: #2b2826;
+  --cordovan: #912f40;
+
+  --font-montserrat: 'Montserrat', sans-serif;
+  --font-roboto: 'Roboto', monospace;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+
+  min-height: 72vh;
+}
+
+main > h1 {
+  margin-top: 1em;
+}
+
+main > section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main > section > h2 {
+  margin: 0.5em 0;
+}
+
+main > section > ul {
+  list-style: none;
+  padding: 2em;
+  margin: 1em auto;
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--flash-white);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px var(--timberwolf);
+}
+
+main > section > ul > li {
+  margin: 0.5em;
+}
