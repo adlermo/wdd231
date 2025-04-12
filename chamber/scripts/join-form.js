@@ -25,3 +25,6 @@ document.getElementById('display-membership-type')
 
 document.getElementById('display-description')
     .textContent = urlParams.get('description') || 'N/A';
+
+document.getElementById('display-timestamp')
+    .textContent = urlParams.get('timestamp') || 'N/A';

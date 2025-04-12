@@ -17,6 +17,9 @@ document.getElementById("close-dialog")
     .addEventListener("click", closeDialog);
 // Above event listeners for the close button
 
+// Setting timestamp value
+document.getElementById("timestamp")
+    .value = new Date().toLocaleString("en-US", { timeZone: "America/Sao_Paulo" });
 
 const title = document.getElementById("dialog-title");
 const description = document.getElementById("dialog-description");
