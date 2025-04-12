@@ -19,7 +19,11 @@ document.getElementById("close-dialog")
 
 // Setting timestamp value
 document.getElementById("timestamp")
-    .value = new Date().toLocaleString("en-US", { timeZone: "America/Sao_Paulo" });
+    .value = new Date().toLocaleString("en-US", {
+        timeZone: "America/Sao_Paulo",
+        year: "numeric", month: "long", day: "2-digit",
+        hour: "2-digit", minute: "2-digit"
+    });
 
 const title = document.getElementById("dialog-title");
 const description = document.getElementById("dialog-description");
