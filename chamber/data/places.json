@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Octávio Frias de Oliveira Bridge",
+    "description": "The Octávio Frias de Oliveira Bridge, also known as the Ponte Estaiada, is a cable-stayed bridge located in São Paulo, Brazil. It is one of the most iconic landmarks of the city and features a unique design with a single, large mast that supports the bridge deck.",
+    "address": "Av. das Nações Unidas, 7108 - Vila Cordeiro, São Paulo - SP",
+    "image": "./images/bridge-unsplash.webp"
+  },
+  {
+    "name": "Obelisk of São Paulo",
+    "description": "The Obelisk of São Paulo is a monument located in Ibirapuera Park, São Paulo, Brazil. It is a tribute to the heroes of the Constitutionalist Revolution of 1932 and is one of the city's most recognizable landmarks.",
+    "address": "Parque do Ibirapuera - Vila Mariana, São Paulo - SP",
+    "image": "./images/ibirapuera-unsplash.webp"
+  },
+  {
+    "name": "Ipiranga Museum",
+    "description": "The Ipiranga Museum, also known as the Museu Paulista, is a museum located in the Ipiranga neighborhood of São Paulo, Brazil. It is housed in a neoclassical building and is dedicated to the history of Brazil, particularly the events surrounding the country's independence.",
+    "address": "Parque da Independência - Ipiranga, São Paulo - SP",
+    "image": "./images/ipiranga-unsplash.webp"
+  },
+  {
+    "name": "Vergueiro Park",
+    "description": "Vergueiro Park is a public park located in the city of São Paulo, Brazil. It is known for its green spaces, walking paths, and recreational facilities. The park is a popular destination for locals and visitors alike.",
+    "address": "Rua Vergueiro, 1000 - Vila Mariana, São Paulo - SP",
+    "image": "./images/vergueiro-unsplash.webp"
+  },
+  {
+    "name": "Museum of Art São Paulo (MASP)",
+    "description": "The Museum of Art São Paulo (Museu de Arte de São Paulo Assis Chateaubriand) is an art museum located on Avenida Paulista in São Paulo, Brazil. It is known for its collection of Western art and its modernist architecture.",
+    "address": "Av. Paulista, 1578 - Bela Vista, São Paulo - SP",
+    "image": "./images/trianon-masp-unsplash.webp"
+  },
+  {
+    "name": "Liberdade",
+    "description": "Liberdade is a neighborhood in the city of São Paulo, Brazil, known for its large Japanese community and cultural influence. It features traditional Japanese shops, restaurants, and festivals.",
+    "address": "Liberdade, São Paulo - SP",
+    "image": "./images/liberdade-unsplash.webp"
+  },
+  {
+    "name": "Méqui 1000",
+    "description": "Méqui 1000 is a popular fast-food restaurant in São Paulo, Brazil, known for its unique and creative menu items. It is a favorite spot for locals and tourists looking for a quick bite to eat.",
+    "address": "Av. Paulista, 1811 - Bela Vista, São Paulo - SP",
+    "image": "./images/mequi-1000-unsplash.webp"
+  },
+  {
+    "name": "Matarazzo Building",
+    "description": "The Matarazzo Building, also known as the Palácio Matarazzo, is a historic building located in the city of São Paulo, Brazil. It was built in the early 20th century and is known for its architectural significance and cultural heritage.",
+    "address": "Praça das Artes - República, São Paulo - SP",
+    "image": "./images/matarazzo-unsplash.webp"
+  }
+]
