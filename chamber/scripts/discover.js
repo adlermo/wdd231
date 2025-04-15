@@ -9,6 +9,7 @@ const fetchPlaces = async () => {
 
     try {
         const response = await fetch(placesUrl);
+        console.log(response)
 
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
@@ -19,52 +20,62 @@ const fetchPlaces = async () => {
     }
 }
 
-// Initialize an empty array to hold the places
+// Use Intersection Observer to lazily load images
+const lazyLoadImages = (cards) => {
+    const images = cards.querySelectorAll('img[data-src]');
+    images.forEach(image => {
+        console.log(image.getAttribute("data-src"));
+        // Set the placeholder image as the src attribute
+        image.setAttribute('src', image.getAttribute("data-src"));
+        // Set the data-src attribute to the actual image URL
+        image.setAttribute('data-src', image.getAttribute('src'));
+        // Call the lazyLoad function to handle the image loading
+        lazyLoad(image);
+    });
+}
+
+const lazyLoad = (image) => {
+
+    const observer = new IntersectionObserver(
+        (image, observer) => {
+            image.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                else {
+                    const img = entry.target;
+
+                    img.setAttribute("src", img.getAttribute("data-src"));
+                    img.removeAttribute("data-src");
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0,
+            rootMargin: '0px 0px 10px 0px',
+        }
+    );
+
+    observer.observe(image);
+}
+
 const displayPlaces = async () => {
     // Call the fetch function to get the places data
     const places = await fetchPlaces();
 
     const placesList = document.getElementById('places');
 
-    // Use Intersection Observer to lazily load images
-    const lazyLoadImages = (image) => {
-        // Check if the browser supports Intersection Observer
-        if (!('IntersectionObserver' in window)) {
-            const observer = new IntersectionObserver(
-                (entries, observer) => {
-                    entries.forEach(entry => {
-                        if (!entry.isIntersecting) return;
-                        else {
-                            const img = entry.target;
+    // Add a placeholder image and set data-src for lazy loading
+    places.forEach(place => {
+        const placeCard = document.createElement('div');
 
-                            const src = img.getAttribute("data-src");
-                            img.setAttribute("src", src);
-                            img.removeAttribute("data-src");
-
-                            observer.unobserve(entry.target);
-                        }
-                    });
-                },
-                {
-                    threshold: 0,
-                    rootMargin: '0px 0px 10px 0px',
-                }
-            );
-
-            observer.observe(image);
-        };
-
-        // Add a placeholder image and set data-src for lazy loading
-        places.forEach(place => {
-            const placeCard = document.createElement('div');
-
-            placeCard.classList.add('place-card');
-            placeCard.innerHTML = `
+        placeCard.classList.add('place-card');
+        placeCard.innerHTML = `
             <h2>${place.name}</h2>
 
             <div>
                 <figure>
-                    <img data-src="${place.image}" alt="${place.name}" src="./images/placeholder.jpg">
+                    <img data-src="${place.image}" alt="${place.name}" src="./images/placeholder.webp">
                 </figure>
                 <p>${place.description}</p>
                 <address>${place.address}</address>
@@ -73,12 +84,10 @@ const displayPlaces = async () => {
             <button>Learn More</button>
         `;
 
-            const img = placeCard.querySelector('img');
-            lazyLoadImages(img);
+        placesList.append(placeCard);
+    });
 
-            placesList.append(placeCard);
-        });
-    }
+    lazyLoadImages(placesList);
 }
 
 // Call the display function to show the places on the page
