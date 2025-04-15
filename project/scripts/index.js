@@ -8,9 +8,8 @@ const getLines = async () => {
         }
 
         const lines = await response.json();
-        console.log(lines);
+
         linesList.push(...lines);
-        console.log(linesList);
     } catch (error) {
         console.error('Error fetching lines:', error);
     }
@@ -20,7 +19,6 @@ const getLines = async () => {
 const populateLines = () => {
     const ul = document.getElementById('lineList');
 
-    const addButton = ul.firstElementChild;
     ul.innerHTML = '';
 
     lines.forEach(line => {
@@ -36,7 +34,24 @@ const populateLines = () => {
         ul.appendChild(li);
     });
 
-    ul.appendChild(addButton);
+
+    const img = document.createElement('img');
+    img.setAttribute('src', 'images/square-plus-solid.svg');
+    img.setAttribute('alt', 'Site Logo');
+    img.setAttribute('width', '20');
+    img.setAttribute('loading', 'lazy');
+
+    const addButton = document.createElement('a');
+    addButton.setAttribute('href', 'login.html');
+
+    // addButton.textContent = 'Add New Line';
+
+    const addListButton = document.createElement('li');
+    addListButton.appendChild(addButton);
+    addButton.appendChild(img);
+    addButton.appendChild(document.createTextNode('Add New Line'));
+
+    ul.appendChild(addListButton);
 }
 
 const changeIframeSrcByLine = (line) => {
@@ -60,25 +75,23 @@ const toggleActiveClass = (e) => {
 
 
 // Main
-
-
 let lines = [];
 
 try {
     lines = JSON.parse(localStorage.getItem('lines'));
-    console.log(lines);
 }
 catch (error) {
     console.log('Error parsing lines from localStorage:', error);
-
 }
 finally {
-    console.log('Sending request to get lines...');
-    getLines().then(() => {
-        localStorage.setItem('lines', JSON.stringify(linesList));
-        lines = linesList;
-
-        populateLines();
-    });
+    if (lines == null) {
+        console.log('Sending request to get lines...');
+        getLines().then(() => {
+            localStorage.setItem('lines', JSON.stringify(linesList));
+            lines = linesList;
+            populateLines();
+        });
+    }
+    populateLines();
 }
 
