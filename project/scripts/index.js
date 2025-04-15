@@ -1,36 +1,37 @@
+const linesList = [];
+
 const getLines = async () => {
     try {
         const response = await fetch('./data/lines.json');
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
         }
+
         const lines = await response.json();
-        return lines;
+        console.log(lines);
+        linesList.push(...lines);
+        console.log(linesList);
     } catch (error) {
         console.error('Error fetching lines:', error);
     }
 }
 
-let lines = localStorage.getItem('lines');
+let lines = [];
 
-if (lines === null || lines.length === 0) {
-    lines = getLines()
-        .then(data => {
-            const lines = data.map(line => {
-                return {
-                    id: line.id,
-                    address: line.address
-                }
-            });
-
-            localStorage.setItem('lines', JSON.stringify(lines))
-            return lines;
-        })
-} else {
-    lines = JSON.parse(lines);
+try {
+    lines = JSON.parse(localStorage.getItem('lines'));
+    console.log(lines);
+}
+catch (error) {
+    console.log('Error parsing lines from localStorage:', error);
 }
 
-localStorage.setItem('lines', JSON.stringify(lines))
+console.log('Sending request to get lines...');
+
+getLines().then(() => {
+    localStorage.setItem('lines', JSON.stringify(linesList));
+    lines = linesList;
+});
 
 // Function to populate the existing lines
 const populateLines = () => {
