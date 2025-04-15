@@ -28,31 +28,43 @@ const displayPlaces = async () => {
 
     // Use Intersection Observer to lazily load images
     const lazyLoadImages = (image) => {
+        // Check if the browser supports Intersection Observer
+        if (!('IntersectionObserver' in window)) {
+            const observer = new IntersectionObserver(
+                (entries, observer) => {
+                    entries.forEach(entry => {
+                        if (!entry.isIntersecting) return;
+                        else {
+                            const img = entry.target;
 
-        const observer = new IntersectionObserver((entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    observer.unobserve(img);
+                            const src = img.getAttribute("data-src");
+                            img.setAttribute("src", src);
+                            img.removeAttribute("data-src");
+
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                {
+                    threshold: 0,
+                    rootMargin: '0px 0px 10px 0px',
                 }
-            });
-        });
+            );
 
-        observer.observe(image);
-    };
+            observer.observe(image);
+        };
 
-    // Add a placeholder image and set data-src for lazy loading
-    places.forEach(place => {
-        const placeItem = document.createElement('div');
+        // Add a placeholder image and set data-src for lazy loading
+        places.forEach(place => {
+            const placeCard = document.createElement('div');
 
-        placeItem.classList.add('place-card');
-        placeItem.innerHTML = `
+            placeCard.classList.add('place-card');
+            placeCard.innerHTML = `
             <h2>${place.name}</h2>
 
             <div>
                 <figure>
-                    <img data-src="${place.image}" alt="${place.name}" src="placeholder.jpg">
+                    <img data-src="${place.image}" alt="${place.name}" src="./images/placeholder.jpg">
                 </figure>
                 <p>${place.description}</p>
                 <address>${place.address}</address>
@@ -61,11 +73,12 @@ const displayPlaces = async () => {
             <button>Learn More</button>
         `;
 
-        const img = placeItem.querySelector('img');
-        lazyLoadImages(img);
+            const img = placeCard.querySelector('img');
+            lazyLoadImages(img);
 
-        placesList.append(placeItem);
-    });
+            placesList.append(placeCard);
+        });
+    }
 }
 
 // Call the display function to show the places on the page
