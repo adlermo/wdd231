@@ -4,8 +4,8 @@
   --flash-white: #eff1f3;
   --xanthous: #e6af2e;
   --black: #2b2826;
-  --font-montserrat: 'Montserrat', sans-serif;
-  --font-roboto: 'Roboto', monospace;
+  --font-montserrat: 'Montserrat', serif;
+  --font-roboto: 'Roboto', sans-serif;
 }
 
 /* Footer Styles */
@@ -21,6 +21,8 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+
+  font-family: var(--font-roboto);
 }
 
 footer > section {
@@ -28,6 +30,11 @@ footer > section {
   height: 100%;
   padding: 0 1em;
   border-radius: 5px;
+}
+
+footer > section.footer-media > a {
+  text-decoration: none;
+  font-size: 1.2em;
 }
 
 footer > section.footer-media > a > img {

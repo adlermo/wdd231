@@ -30,9 +30,12 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        media="screen" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900" rel="preload"
+        as="style" onload="this.onload=null;this.rel='stylesheet'">
+
 
     <script defer src="scripts/dates.js"></script>
     <script defer src="scripts/navigation.js"></script>
@@ -71,23 +74,27 @@
 
     <footer>
         <section class="footer-contact">
-            <p><strong>St Paul Chamber of Commerce</strong></p>
-            <p>R Nilza Medeiros Martins, 490</p>
-            <p>Sao Paulo, Vila Sonia</p>
-            <p>info@stpaulcc.org</p>
-            <p>+55 67 99919-8409</p>
+            <p><strong>St Paul Chamber of Commerce</strong>
+                <br>
+                R Nilza Medeiros Martins, 490
+                <br>
+                Sao Paulo, Vila Sonia
+                <br>
+                info@stpaulcc.org
+                <br>
+                +55 67 99919-8409
+            </p>
         </section>
 
         <section class="footer-media">
-
             <a href="https://www.youtube.com/stpaulcc" target="_blank">
-                <img src="images/youtube.png" alt="Youtube">
+                <img src="images/youtube.png" alt="Youtube" width="50" height="50">
             </a>
             <a href="https://www.instagram.com/stpaulcc" target="_blank">
-                <img src="images/instagram.png" alt="Instagram">
+                <img src="images/instagram.png" alt="Instagram" width="50" height="50">
             </a>
             <a href="https://www.linkedin.com/company/stpaulcc" target="_blank">
-                <img src="images/linkedin.png" alt="LinkedIn">
+                <img src="images/linkedin.png" alt="LinkedIn" width="50" height="50">
             </a>
 
         </section>

@@ -26,9 +26,7 @@ const lazyLoadImages = (cards) => {
         image.setAttribute('src', image.getAttribute('data-src'));
         image.setAttribute('data-src', image.getAttribute('src'));
 
-        setTimeout(() => {
-            lazyLoad(image);
-        }, 2000);
+        lazyLoad(image);
     });
 }
 
@@ -85,7 +83,9 @@ const displayPlaces = async () => {
         placesList.append(placeCard);
     });
 
-    lazyLoadImages(placesList);
+    setTimeout(() => {
+        lazyLoadImages(placesList);
+    }, 800);
 }
 
 // Call the display function to show the places on the page
