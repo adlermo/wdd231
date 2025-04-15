@@ -16,23 +16,6 @@ const getLines = async () => {
     }
 }
 
-let lines = [];
-
-try {
-    lines = JSON.parse(localStorage.getItem('lines'));
-    console.log(lines);
-}
-catch (error) {
-    console.log('Error parsing lines from localStorage:', error);
-}
-
-console.log('Sending request to get lines...');
-
-getLines().then(() => {
-    localStorage.setItem('lines', JSON.stringify(linesList));
-    lines = linesList;
-});
-
 // Function to populate the existing lines
 const populateLines = () => {
     const ul = document.getElementById('lineList');
@@ -56,9 +39,6 @@ const populateLines = () => {
     ul.appendChild(addButton);
 }
 
-// Call the function when the page loads
-document.addEventListener('DOMContentLoaded', populateLines);
-
 const changeIframeSrcByLine = (line) => {
     const lineAddress = lines.filter(l => l.id == line.split(' ')[1])
 
@@ -77,3 +57,28 @@ const toggleActiveClass = (e) => {
 
     changeIframeSrcByLine(oldTagA[0].innerText)
 }
+
+
+// Main
+
+
+let lines = [];
+
+try {
+    lines = JSON.parse(localStorage.getItem('lines'));
+    console.log(lines);
+}
+catch (error) {
+    console.log('Error parsing lines from localStorage:', error);
+
+}
+finally {
+    console.log('Sending request to get lines...');
+    getLines().then(() => {
+        localStorage.setItem('lines', JSON.stringify(linesList));
+        lines = linesList;
+
+        populateLines();
+    });
+}
+
