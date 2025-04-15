@@ -119,3 +119,14 @@ main > section.discover > div.discover-list > div.place-card > button:hover {
 main > section.discover > div.discover-list > div.place-card > button:active {
   box-shadow: 0 0 5px var(--black);
 }
+
+/* Sidebar color */
+#sidebar {
+  background-color: var(--flash-white);
+  border-radius: 8px;
+  border: 1px solid var(--timberwolf);
+  padding: 2rem 1em;
+
+  width: 50%;
+  text-align: center;
+}

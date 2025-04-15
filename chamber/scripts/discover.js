@@ -1,34 +1,3 @@
-/* 
- * 
- * Handling local storage for the last connection time
- */
-
-// Save client last connection time in local storage
-const lastConnectionTime = new Date().toISOString();
-localStorage.setItem('lastConnectionTime', lastConnectionTime);
-
-// Get the last connection time from local storage
-const lastConnectionTimeFromStorage = localStorage.getItem('lastConnectionTime');
-
-// Parse the last connection time to a Date object
-const lastConnectionDate = new Date(lastConnectionTimeFromStorage);
-
-// Get the current time
-const currentTime = new Date();
-
-// Calculate the difference in milliseconds
-const timeDifference = currentTime - lastConnectionDate;
-
-// Convert the difference to minutes
-const timeDifferenceInMinutes = Math.floor(timeDifference / (1000 * 60));
-
-// Check if the difference is within same day
-if (lastConnectionDate.toDateString() === currentTime.toDateString()) {
-    // If the difference is within the same day, do not clear local storage
-    console.log("Local storage will not be cleared today.");
-}
-
-
 /*
  * 
  * Fetching the list of places to discover from data/places.json
@@ -81,3 +50,47 @@ const displayPlaces = async () => {
 
 // Call the display function to show the places on the page
 displayPlaces();
+
+
+/* 
+ * 
+ * Handling local storage for the last connection time
+ */
+
+// Get the sidebar content area
+const sidebarContent = document.getElementById('sidebar');
+
+// Get the current date
+const currentDate = Date.now();
+
+// Retrieve the last visit date from localStorage
+const lastVisit = localStorage.getItem('lastVisit');
+
+// Function to calculate the difference in days
+const calculateDaysDifference = (current, previous) => {
+    const millisecondsPerDay = 1000 * 60 * 60 * 24;
+    return Math.floor((current - previous) / millisecondsPerDay);
+};
+
+let message = '';
+
+// Check if this is the user's first visit
+if (!lastVisit) {
+    message = "Welcome! Let us know if you have any questions.";
+} else {
+    const daysDifference = calculateDaysDifference(currentDate, parseInt(lastVisit));
+
+    if (daysDifference < 1) {
+        message = "Back so soon! Awesome!";
+    } else if (daysDifference === 1) {
+        message = "You last visited 1 day ago.";
+    } else {
+        message = `You last visited ${daysDifference} days ago.`;
+    }
+}
+
+// Display the message in the sidebar content area
+sidebarContent.textContent = message;
+
+// Update the last visit date in localStorage
+localStorage.setItem('lastVisit', currentDate);
