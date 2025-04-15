@@ -38,10 +38,48 @@ main > section.discover > p {
 main > section.discover > div.discover-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(300px, 1fr));
+  grid-template-rows: auto;
+  grid-template-areas:
+    'card1 card2'
+    'card3 card4'
+    'card5 card6'
+    'card7 card8';
   gap: 2rem;
 
   padding: 0 2rem;
   margin: 0 auto;
+}
+
+main > section.discover > div.discover-list > div.place-card:nth-child(1) {
+  grid-area: card1;
+}
+
+main > section.discover > div.discover-list > div.place-card:nth-child(2) {
+  grid-area: card2;
+}
+
+main > section.discover > div.discover-list > div.place-card:nth-child(3) {
+  grid-area: card3;
+}
+
+main > section.discover > div.discover-list > div.place-card:nth-child(4) {
+  grid-area: card4;
+}
+
+main > section.discover > div.discover-list > div.place-card:nth-child(5) {
+  grid-area: card5;
+}
+
+main > section.discover > div.discover-list > div.place-card:nth-child(6) {
+  grid-area: card6;
+}
+
+main > section.discover > div.discover-list > div.place-card:nth-child(7) {
+  grid-area: card7;
+}
+
+main > section.discover > div.discover-list > div.place-card:nth-child(8) {
+  grid-area: card8;
 }
 
 main > section.discover > div.discover-list > div.place-card {
@@ -59,19 +97,21 @@ main > section.discover > div.discover-list > div.place-card > h3 {
 }
 
 main > section.discover > div.discover-list > div.place-card > div {
-  width: 100%;
-  margin: 2em auto;
-
-  gap: 1em;
   display: grid;
   grid-template-columns: 1fr 0.8fr;
   grid-template-rows: 1fr 0.5fr;
+  grid-template-areas:
+    'image details'
+    'image button';
+  width: 100%;
+  margin: 2em auto;
+  gap: 1em;
 }
 
 main > section.discover > div.discover-list > div.place-card > div > figure {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
+  grid-area: image;
 }
+
 main
   > section.discover
   > div.discover-list
@@ -110,6 +150,8 @@ main > section.discover > div.discover-list > div.place-card > button {
   border-radius: 8px;
   padding: 0.5rem 2rem;
   text-align: center;
+
+  grid-area: button;
 }
 
 main > section.discover > div.discover-list > div.place-card > button:hover {
