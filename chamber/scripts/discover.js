@@ -26,6 +26,23 @@ const displayPlaces = async () => {
 
     const placesList = document.getElementById('places');
 
+    // Use Intersection Observer to lazily load images
+    const lazyLoadImages = (image) => {
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    observer.unobserve(img);
+                }
+            });
+        });
+
+        observer.observe(image);
+    };
+
+    // Add a placeholder image and set data-src for lazy loading
     places.forEach(place => {
         const placeItem = document.createElement('div');
 
@@ -35,7 +52,7 @@ const displayPlaces = async () => {
 
             <div>
                 <figure>
-                    <img src="${place.image}" alt="${place.name}">
+                    <img data-src="${place.image}" alt="${place.name}" src="placeholder.jpg">
                 </figure>
                 <p>${place.description}</p>
                 <address>${place.address}</address>
@@ -43,6 +60,9 @@ const displayPlaces = async () => {
 
             <button>Learn More</button>
         `;
+
+        const img = placeItem.querySelector('img');
+        lazyLoadImages(img);
 
         placesList.append(placeItem);
     });
