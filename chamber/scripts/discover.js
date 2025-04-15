@@ -9,7 +9,6 @@ const fetchPlaces = async () => {
 
     try {
         const response = await fetch(placesUrl);
-        console.log(response)
 
         if (!response.ok) {
             throw new Error('Network response was not ok ' + response.statusText);
@@ -24,18 +23,16 @@ const fetchPlaces = async () => {
 const lazyLoadImages = (cards) => {
     const images = cards.querySelectorAll('img[data-src]');
     images.forEach(image => {
-        console.log(image.getAttribute("data-src"));
-        // Set the placeholder image as the src attribute
-        image.setAttribute('src', image.getAttribute("data-src"));
-        // Set the data-src attribute to the actual image URL
+        image.setAttribute('src', image.getAttribute('data-src'));
         image.setAttribute('data-src', image.getAttribute('src'));
-        // Call the lazyLoad function to handle the image loading
-        lazyLoad(image);
+
+        setTimeout(() => {
+            lazyLoad(image);
+        }, 2000);
     });
 }
 
 const lazyLoad = (image) => {
-
     const observer = new IntersectionObserver(
         (image, observer) => {
             image.forEach(entry => {
@@ -43,8 +40,8 @@ const lazyLoad = (image) => {
                 else {
                     const img = entry.target;
 
-                    img.setAttribute("src", img.getAttribute("data-src"));
-                    img.removeAttribute("data-src");
+                    img.setAttribute('src', img.getAttribute('data-src'));
+                    img.removeAttribute('data-src');
 
                     observer.unobserve(entry.target);
                 }
@@ -75,7 +72,8 @@ const displayPlaces = async () => {
 
             <div>
                 <figure>
-                    <img data-src="${place.image}" alt="${place.name}" src="./images/placeholder.webp">
+                    <img data-src="${place.image}" alt="${place.name}" src="./images/placeholder.webp"
+                    width="460" height="400">
                 </figure>
                 <p>${place.description}</p>
                 <address>${place.address}</address>
@@ -118,14 +116,14 @@ let message = '';
 
 // Check if this is the user's first visit
 if (!lastVisit) {
-    message = "Welcome! Let us know if you have any questions.";
+    message = 'Welcome! Let us know if you have any questions.';
 } else {
     const daysDifference = calculateDaysDifference(currentDate, parseInt(lastVisit));
 
     if (daysDifference < 1) {
-        message = "Back so soon! Awesome!";
+        message = 'Back so soon! Awesome!';
     } else if (daysDifference === 1) {
-        message = "You last visited 1 day ago.";
+        message = 'You last visited 1 day ago.';
     } else {
         message = `You last visited ${daysDifference} days ago.`;
     }
