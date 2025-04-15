@@ -13,7 +13,7 @@
 
 @media screen and (min-width: 641px) and (max-width: 1024px) {
   main > section.discover > div.discover-list {
-    grid-template-columns: 1, 1fr;
+    grid-template-columns: 1fr;
   }
 }
 
@@ -21,7 +21,7 @@
 
 @media screen and (min-width: 320px) and (max-width: 640px) {
   main > section.discover > div.discover-list {
-    grid-template-columns: 1, 1fr;
+    grid-template-columns: 1fr;
   }
 
   main > section.discover > div.discover-list > div.place-card > div {
