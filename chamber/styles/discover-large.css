@@ -152,6 +152,7 @@ main > section.discover > div.discover-list > div.place-card > button {
   text-align: center;
 
   grid-area: button;
+  cursor: pointer;
 }
 
 main > section.discover > div.discover-list > div.place-card > button:hover {
